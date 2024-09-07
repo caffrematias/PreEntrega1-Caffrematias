@@ -1,7 +1,15 @@
-let nombreIngresado = prompt("Ingresa tu nombre");
-let precio= 0;
-alert("Hola " + nombreIngresado + " Bienvenido a Nicakes");
-let primerMenu = prompt("ingrese la opcion deseada \n 1-comprar \n 2-salir");
+function saludar(){
+    let nombreIngresado = prompt("Ingresa tu nombre");
+    do{
+        if(!nombreIngresado){
+            alert("El nombre no puede estar vacio")
+        }
+    }
+    while(!nombreIngresado){
+        alert("Hola " + nombreIngresado + " Bienvenido a Nicakes")
+    }
+}
+saludar();
 if(primerMenu==1){
     let compras= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo");
     if(compras==1){
