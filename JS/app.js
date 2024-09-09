@@ -10,7 +10,48 @@ function saludar(){
     }
 }
 saludar();
-if(primerMenu==1){
+let carrito;
+function comprar(carrito){
+    let primerMenu= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo");
+    switch(primerMenu){
+        case "1":
+            cupcakes(carrito);
+            break;
+        case "2":
+            budines(carrito);
+            break;
+        case "3":
+            bizcochuelo(carrito);    
+            break;
+        default:
+            alert("Por favor, ingresa un número válido.");
+            comprar(carrito);
+            break;
+    }
+    function cupcakes(carrito){
+        let secCupcakes = prompt("ingrese la opcion deseada \n 1-chocolate $4700 \n 2-naranja $3200 \n 3-limon $3200");
+        switch(secCupcakes,carrito){
+            case "1":
+                carrito= carrito + 4700
+                comprar(carrito);
+                break;
+            case "2":
+                carrito= carrito + 3200
+                comprar(carrito);
+                break;
+            case "3":
+                carrito= carrito + 3200
+                comprar(carrito);
+                break;
+            /*default:
+                alert("Por favor, ingresa un número válido.");
+                cupcakes(carrito);
+                break;*/
+    }
+}
+}
+comprar(carrito);
+/*if(primerMenu==1){
     let compras= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo");
     if(compras==1){
         let cupcakes = prompt("ingrese la opcion deseada \n 1-chocolate $4700 \n 2-naranja $3200 \n 3-limon $3200");
@@ -45,4 +86,4 @@ if(primerMenu==1){
             alert("Gracias por su compra de bizcochuelo integral, el precio final es de $3000");
         }
         }
-}
+}*/
