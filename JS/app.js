@@ -1,18 +1,19 @@
 function saludar(){
-    let nombreIngresado = prompt("Ingresa tu nombre");
+    let nombreIngresado;
     do{
+        nombreIngresado= prompt("Ingresa tu nombre");
         if(!nombreIngresado){
             alert("El nombre no puede estar vacio")
         }
-    }
-    while(!nombreIngresado){
+    }while(!nombreIngresado);
         alert("Hola " + nombreIngresado + " Bienvenido a Nicakes")
     }
-}
+
 saludar();
-let carrito;
+let carrito = 0;
+debugger
 function comprar(carrito){
-    let primerMenu= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo");
+    let primerMenu= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo \n 4-Dejar de comprar");
     switch(primerMenu){
         case "1":
             cupcakes(carrito);
@@ -23,33 +24,34 @@ function comprar(carrito){
         case "3":
             bizcochuelo(carrito);    
             break;
+        case "4":
+            alert("tu compra fue de un total de " + carrito + " gracias por comprar en Nicakes");
+            break;
         default:
             alert("Por favor, ingresa un número válido.");
             comprar(carrito);
+            break;}
+    }
+function cupcakes(carrito){
+    let secCupcakes = prompt("ingrese la opcion deseada \n 1-chocolate $4700 \n 2-naranja $3200 \n 3-limon $3200");
+    switch(secCupcakes){
+        case "1":
+            carrito= carrito + 4700
+            comprar(carrito);
             break;
+        case "2":
+            carrito= carrito + 3200
+            comprar(carrito);
+            break;
+        case "3":
+            carrito= carrito + 3200
+            comprar(carrito);
+            break;
+        default:
+            alert("Por favor, ingresa un número válido.");
+            cupcakes(carrito);}
     }
-    function cupcakes(carrito){
-        let secCupcakes = prompt("ingrese la opcion deseada \n 1-chocolate $4700 \n 2-naranja $3200 \n 3-limon $3200");
-        switch(secCupcakes,carrito){
-            case "1":
-                carrito= carrito + 4700
-                comprar(carrito);
-                break;
-            case "2":
-                carrito= carrito + 3200
-                comprar(carrito);
-                break;
-            case "3":
-                carrito= carrito + 3200
-                comprar(carrito);
-                break;
-            /*default:
-                alert("Por favor, ingresa un número válido.");
-                cupcakes(carrito);
-                break;*/
-    }
-}
-}
+
 comprar(carrito);
 /*if(primerMenu==1){
     let compras= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo");
