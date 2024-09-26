@@ -1,4 +1,4 @@
-function saludar(){
+/*function saludar(){
     let nombreIngresado;
     do{
         nombreIngresado= prompt("Ingresa tu nombre");
@@ -11,7 +11,7 @@ function saludar(){
 
 saludar();
 let carrito = 0;
-debugger
+
 function comprar(carrito){
     let primerMenu= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo \n 4-Dejar de comprar");
     switch(primerMenu){
@@ -85,4 +85,43 @@ function bizcochuelo(carrito){
             alert("Por favor, ingresa un número válido.");
             bizcochuelo(carrito);}
     }
-comprar(carrito);
+comprar(carrito);*/
+function saludar(){
+    let nombreIngresado;
+    do{
+        nombreIngresado= prompt("Ingresa tu nombre");
+        if(!nombreIngresado){
+            alert("El nombre no puede estar vacio")
+        }
+    }while(!nombreIngresado);
+        alert("Hola " + nombreIngresado + " Bienvenido a Nicakes")
+    }
+
+saludar();
+let carrito = 0;
+
+function cupcakes(tipo, precio){
+    this.tipo = tipo;
+    this.precio = parseInt(precio);
+}
+
+const cupcakesChocolate = new cupcakes(chocolate, 4700);
+const cupcakesNaranja = new cupcakes(naranja, 3200);
+const cupcakesLimon = new cupcakes(limon, 3200);
+
+function budines(tipo, precio){
+    this.tipo = tipo;
+    this.precio = parseInt(precio);
+}
+
+const budinesChocolate = new budines(chocolate, 4700);
+const budinesNaranja = new budines(naranja, 3200);
+const budinesLimon = new budines(limon, 3200);
+
+function bizcochuelo(tipo, precio){
+    this.tipo = tipo;
+    this.precio = parseInt(precio);
+}
+
+const bizcochueloVainilla = new bizcochuelo(vainilla, 4700);
+const bizcochueloIntegral = new bizcochuelo(integral, 3200);
