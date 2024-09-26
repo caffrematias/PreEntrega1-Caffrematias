@@ -1,0 +1,43 @@
+{"productos": [
+    {
+        "nombre": "cupcakesChocolate",
+        "precio": 4700,
+        "categoria": "cupcakes"
+    },
+    {
+        "nombre": "cupcakesNaranja",
+        "precio": 3200,
+        "categoria": "cupcakes"
+    },
+    {
+        "nombre": "cupcakesLimon",
+        "precio": 3200,
+        "categoria": "cupcakes"
+    },
+    {
+        "nombre": "budinesChocolate",
+        "precio": 4700,
+        "categoria": "budines"
+    },
+    {
+        "nombre": "budinesNaranja",
+        "precio": 3200,
+        "categoria": "budines"
+    },
+    {
+        "nombre": "budinesLimon",
+        "precio": 3200,
+        "categoria": "budines"
+    },
+    {
+        "nombre": "bizcochueloVainilla",
+        "precio": 4700,
+        "categoria": "bizcochuelo"
+    },
+    {
+        "nombre": "bizcochueloIntegral",
+        "precio": 3200,
+        "categoria": "bizcochuelo"
+    }
+]
+}
