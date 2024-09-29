@@ -1,91 +1,3 @@
-/*function saludar(){
-    let nombreIngresado;
-    do{
-        nombreIngresado= prompt("Ingresa tu nombre");
-        if(!nombreIngresado){
-            alert("El nombre no puede estar vacio")
-        }
-    }while(!nombreIngresado);
-        alert("Hola " + nombreIngresado + " Bienvenido a Nicakes")
-    }
-
-saludar();
-let carrito = 0;
-
-function comprar(carrito){
-    let primerMenu= prompt("ingrese la opcion deseada \n 1-cupcakes \n 2-budines \n 3-bizcochuelo \n 4-Dejar de comprar");
-    switch(primerMenu){
-        case "1":
-            cupcakes(carrito);
-            break;
-        case "2":
-            budines(carrito);
-            break;
-        case "3":
-            bizcochuelo(carrito);    
-            break;
-        case "4":
-            alert("tu compra fue de un total de " + carrito + " gracias por comprar en Nicakes");
-            break;
-        default:
-            alert("Por favor, ingresa un número válido.");
-            comprar(carrito);
-            break;}
-    }
-function cupcakes(carrito){
-    let secCupcakes = prompt("ingrese la opcion deseada \n 1-chocolate $4700 \n 2-naranja $3200 \n 3-limon $3200");
-    switch(secCupcakes){
-        case "1":
-            carrito= carrito + 4700
-            comprar(carrito);
-            break;
-        case "2":
-            carrito= carrito + 3200
-            comprar(carrito);
-            break;
-        case "3":
-            carrito= carrito + 3200
-            comprar(carrito);
-            break;
-        default:
-            alert("Por favor, ingresa un número válido.");
-            cupcakes(carrito);}
-    }
-function budines(carrito){
-    let secbudines = prompt("ingrese la opcion deseada \n 1-chocolate $3200 \n 2-naranja $2500 \n 3-limon $2500");
-    switch(secbudines){
-        case "1":
-            carrito= carrito + 3200
-            comprar(carrito);
-            break;
-        case "2":
-            carrito= carrito + 2500
-            comprar(carrito);
-            break;
-        case "3":
-            carrito= carrito + 2500
-            comprar(carrito);
-            break;
-        default:
-            alert("Por favor, ingresa un número válido.");
-            budines(carrito);}
-    }
-function bizcochuelo(carrito){
-    let secBizcochuelo = prompt("ingrese la opcion deseada \n 1-vainilla $2700 \n 2-integral $3000");
-    switch(secBizcochuelo){
-        case "1":
-            carrito= carrito + 2700
-            comprar(carrito);
-            break;
-        case "2":
-            carrito= carrito + 3000
-            comprar(carrito);
-            break;
-        default:
-            alert("Por favor, ingresa un número válido.");
-            bizcochuelo(carrito);}
-    }
-comprar(carrito);*/
 function saludar(){
     let nombreIngresado;
     do{
@@ -98,30 +10,34 @@ function saludar(){
     }
 
 saludar();
-let carrito = 0;
-
-function cupcakes(tipo, precio){
-    this.tipo = tipo;
-    this.precio = parseInt(precio);
+const productos = [
+    {id:1, nombre: "cupcakesChocolate", precio: 4700, categoria: "cupcakes"},
+    {id:2, nombre: "cupcakesNaranja", precio: 3200, categoria: "cupcakes"},
+    {id:3, nombre: "cupcakesLimon", precio: 3200, categoria: "cupcakes"},
+    {id:4, nombre: "budinesChocolate", precio: 4700, categoria: "budines"},
+    {id:5, nombre: "budinesNaranja", precio: 3200, categoria: "budines"},
+    {id:6, nombre: "budinesLimon", precio: 3200, categoria: "budines"},
+    {id:7, nombre: "bizcochueloVainilla", precio: 4700, categoria: "bizcochuelo"},
+    {id:8, nombre: "bizcochueloIntegral", precio: 3200, categoria: "bizcochuelo"},
+];
+function renderProduct(productos){
+    let container = document.getElementById('container');
+    let content = '';
+    let etiquetaselection = document.createElement('selection');
+    productos.map(elemento => {
+    let etiquetadiv = document.createElement('div');
+        content += `
+        <h1>${elemento.nombre}</h1>
+        <p>${elemento.precio}</p>
+        <p>${elemento.categoria}</p>
+        <button>Agregar al carrito</button>
+    `;
+    document.body.appendChild(etiquetadiv);
+    })
+    container.innerHTML = content;
+    document.body.appendChild(etiquetaselection);
 }
+renderProduct(productos);
 
-const cupcakesChocolate = new cupcakes(chocolate, 4700);
-const cupcakesNaranja = new cupcakes(naranja, 3200);
-const cupcakesLimon = new cupcakes(limon, 3200);
+//me quede en 17:17
 
-function budines(tipo, precio){
-    this.tipo = tipo;
-    this.precio = parseInt(precio);
-}
-
-const budinesChocolate = new budines(chocolate, 4700);
-const budinesNaranja = new budines(naranja, 3200);
-const budinesLimon = new budines(limon, 3200);
-
-function bizcochuelo(tipo, precio){
-    this.tipo = tipo;
-    this.precio = parseInt(precio);
-}
-
-const bizcochueloVainilla = new bizcochuelo(vainilla, 4700);
-const bizcochueloIntegral = new bizcochuelo(integral, 3200);
