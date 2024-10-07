@@ -13,52 +13,5 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0; }
-main {
-    background-color: #e29898; 
-}
-    
-
-header h1{
-    color: white;
-}
-
-.cupcakes .card1 img{
-    width: 15rem;
-    height: 30rem;
-    flex-direction: row
-}
-.cupcakes .card2 img{
-    width: 15rem;
-    height: 30rem;
-    flex-direction: row
-}
-.cupcakes .card3 img{
-    width: 15rem;
-    height: 30rem;
-    flex-direction: row
-}
-.budines .card1 img{
-    width: 30rem;
-    height: 15rem;
-    flex-direction: row
-}
-.budines .card2 img{
-    width: 30rem;
-    height: 15rem;
-    flex-direction: row
-}
-.budines .card3 img{
-    width: 30rem;
-    height: 15rem;
-    flex-direction: row
-}
-.bizcochuelo .card1 img{
-    width: 30rem;
-    height: 15rem;
-    flex-direction: row}
-.bizcochuelo .card2 img{
-    width: 15rem;
-    height: 30rem;
-    flex-direction: row
-}
+    top: 0; 
+    color: white;}
